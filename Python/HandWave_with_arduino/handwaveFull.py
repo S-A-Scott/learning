@@ -2,7 +2,7 @@
 import gtk, os, serial, gobject
 
 # Global variables
-dir="/home/spencer/Documents/pythonStudy/2014.5/pic"
+dir="pic"
 pixbufs=[]
 image=None
 bg=None

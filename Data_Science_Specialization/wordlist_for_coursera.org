@@ -1,0 +1,29 @@
+* Contents
+
+- [[#basics][Basics]]
+- [[#data-science][Data Science]]
+  - [[#data-scientist-toolbox][Data Scientist Toolbox]]
+  - [[#r-programming][R Programming]]
+
+#+NAME: basics
+* Basics [0/4]
+
+- [ ] syllabus
+- [ ] eligible
+- [ ] conceptual
+- [ ] announcement
+
+
+#+NAME: data-science
+* Data Science
+
+#+NAME: data-scientist-toolbox
+** Data Scientist Toolbox [0/2]
+
+- [ ] literacy
+  - data analytic literacy
+- [ ]
+
+  #+NAME: r-programming
+** R Programming
+

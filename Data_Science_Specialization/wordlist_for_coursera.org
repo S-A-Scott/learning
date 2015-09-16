@@ -5,25 +5,32 @@
   - [[#data-scientist-toolbox][Data Scientist Toolbox]]
   - [[#r-programming][R Programming]]
 
-#+NAME: basics
-* Basics [0/4]
+* Basics [0/6]
 
 - [ ] syllabus
 - [ ] eligible
 - [ ] conceptual
 - [ ] announcement
+- [ ] etiquette
+  1. Etiquette for forum/help sites: DOs
+- [ ] recap
 
 
-#+NAME: data-science
 * Data Science
 
-#+NAME: data-scientist-toolbox
-** Data Scientist Toolbox [0/2]
+** Data Scientist Toolbox [0/7]
 
 - [ ] literacy
-  - data analytic literacy
-- [ ]
+  1. data analytic literacy
+- [ ] surplus
+- [ ] deluge
+  1. The data deluge
+- [ ] exploratory
+  1. Exploratory Analysis Overview
+- [ ] Reproducible
+  1. Reproducible Research Overview 
+- [ ] deriving
+- [ ] cross validation
 
-  #+NAME: r-programming
 ** R Programming
 

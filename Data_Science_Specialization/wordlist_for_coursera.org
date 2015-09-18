@@ -5,7 +5,7 @@
   - [[#data-scientist-toolbox][Data Scientist Toolbox]]
   - [[#r-programming][R Programming]]
 
-* Basics [0/7]
+* Basics [0/8]
 
 - [ ] syllabus
 - [ ] eligible
@@ -15,11 +15,12 @@
   1. Etiquette for forum/help sites: DOs
 - [ ] recap
 - [ ] tertiary
+- [ ] plagiarism
 
 
 * Data Science
 
-** Data Scientist Toolbox [0/8]
+** Data Scientist Toolbox [0/11]
 
 - [ ] literacy
   1. data analytic literacy
@@ -33,6 +34,9 @@
 - [ ] deriving
 - [ ] cross validation
 - [ ] causal
+- [ ] confounding
+- [ ] causation
+- [ ] correlation
 
 ** R Programming
 

@@ -4,6 +4,8 @@
 - [[#data-science][Data Science]]
   - [[#data-scientist-toolbox][Data Scientist Toolbox]]
   - [[#r-programming][R Programming]]
+- [[#books][Books]]
+  - [[#web-scraping-with-python][Web Scraping with Python]]
 
 * Basics [0/8]
 
@@ -40,3 +42,16 @@
 
 ** R Programming
 
+- [ ] tabular
+  1. tabular data
+- [ ] annotate
+
+* Books
+
+** Web Scraping with Python [0/3]
+
+- [ ] disparate
+  1. They provide nice, convenient interfaces between multiple disparate applications.
+- [ ] in lieu of
+  1. In reality, many APIs use POST requests in lieu of PUT requests when updating information.
+- [ ] 

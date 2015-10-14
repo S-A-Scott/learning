@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{report}
+
+% Definitions
+\usepackage{lscape}
+\usepackage[height=25cm]{geometry}
+\usepackage{timetable}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{landscape}
+% \noindent\printheading{Studenplan von Martin Thoma - 1. Semester}
+
+% Define the layout of your time tables
+\setslotsize{2.8cm}{0.3cm}
+\setslotcount{7}{45}
+\settopheight{2}
+\settextframe{0.8mm}
+
+% Retro
+\setframetype[t]{1}
+\seteventcornerradius{0pt}
+
+% Print timestamps into event blocks
+%\setprinttimestamps{2}
+
+% Define event types
+\defineevent{mathematics}        {0.0} {0.28}{1.0} {1.0}{1.0}{1.0}
+\defineevent{english}            {1.0} {0.4} {0.2} {1.0}{1.0}{1.0}
+\defineevent{exercise}   {0.6} {0.8} {1.0} {1.0}{1.0}{1.0}
+\defineevent{coursera}           {1.0} {0.4} {0.2} {1.0}{1.0}{1.0}
+\defineevent{computer-science}           {0.21}{0.5} {0.16}{1.0}{1.0}{1.0}
+
+% Start the time table
+\begin{timetable}
+  \hours{7}{20}{1}
+  \englishdays{1}
+  
+  \event 1 {0700} {0800}   {Vocabulary}                 {}      {dorm 349}      {english}
+  \event 1 {0800} {0930}   {English}                    {}      {dept-D 304}    {english}
+  \event 1 {0950} {1120}   {Statistical Inference}      {}      {dept-VI 9-14}  {mathematics}
+  \event 1 {1250} {1420}   {Machine Learning}           {}      {dorm 349}      {computer-science}
+  \event 1 {1440} {1610}   {Concrete Mathematics}       {}      {dept-D 304}    {mathematics}
+  \event 1 {1630} {1800}   {Thomas Calculus}            {}      {dorm 349}      {mathematics}
+  \event 1 {1900} {2000}   {Data Structures}            {}      {dorm 349}      {computer-science}
+  \event 1 {2000} {2130}   {Linear Algebra}             {}      {dorm 349}      {mathematics}
+  
+
+  \event 2 {0700} {0800}   {Vocabulary}                 {}      {dorm 349}      {english}
+  \event 2 {0800} {0930}   {English}                    {}      {dept-VI 10-8}  {english}
+  \event 2 {0950} {1120}   {Machine Learning}           {}      {dorm 349}      {computer-science}
+  \event 2 {1250} {1420}   {Statistical Inference}      {}      {dept-VI 5-4}   {mathematics}
+  \event 2 {1440} {1610}   {Probability}                {}      {dept-VI 6-5}   {mathematics}
+  \event 2 {1630} {1800}   {Thomas Calculus}            {*}     {dept-A 904}    {mathematics}
+  \event 2 {1900} {2000}   {Data Structures}            {}      {dorm 349}      {computer-science}
+  \event 2 {2000} {2130}   {Linear Algebra}             {}      {dorm 349}      {mathematics}
+  
+
+  \event 3 {0700} {0800}   {Vocabulary}                 {}      {dorm 349}      {english}
+  \event 3 {0800} {0930}   {English}                    {}      {dorm 349}      {english}
+  \event 3 {0950} {1120}   {Statistical Inference}      {}      {dorm 349}      {mathematics}
+  \event 3 {1250} {1420}   {Machine Learning}           {}      {dorm 349}      {computer-science}
+  \event 3 {1440} {1610}   {Concrete Mathematics}       {}      {dorm 349}      {mathematics}
+  \event 3 {1630} {1800}   {Thomas Calculus}            {}      {dorm 349}      {mathematics}
+  \event 3 {1900} {2000}   {Data Structures}            {}      {dorm 349}      {computer-science}
+  \event 3 {2000} {2130}   {Linear Algebra}             {}      {dorm 349}      {mathematics}
+  
+
+  \event 4 {0700} {0800}   {Vocabulary}                 {}      {dorm 349}      {english}
+  \event 4 {0800} {0930}   {English}                    {}      {dept-VI 2-2}   {english}
+  \event 4 {0950} {1120}   {Statistical Inference}      {}      {dorm 349}      {mathematics}
+  \event 4 {1250} {1420}   {Thomas Calculus}            {}      {dept-VI 9-7}   {mathematics}
+  \event 4 {1440} {1610}   {Concrete Mathematics}       {}      {dept-VI 8-20}  {mathematics}
+  \event 4 {1630} {1800}   {Machine Learning}           {}      {dorm 349}      {computer-science}
+  \event 4 {1900} {2000}   {Data Structures}            {}      {dorm 349}      {computer-science}
+  \event 4 {2000} {2130}   {Linear Algebra}             {}      {dorm 349}      {mathematics}
+  
+
+  \event 5 {0700} {0800}   {Vocabulary}                 {}      {dorm 349}      {english}
+  \event 5 {0800} {0930}   {English}                    {}      {dept-VI 2-2}   {english}
+  \event 5 {0950} {1120}   {Statistical Inference}      {}      {dorm 349}      {mathematics}
+  \event 5 {1250} {1420}   {Thomas Calculus}            {}      {dept-VI 9-7}   {mathematics}
+  \event 5 {1440} {1610}   {Concrete Mathematics}       {}      {dept-VI 8-20}  {mathematics}
+  \event 5 {1630} {1800}   {Machine Learning}           {}      {dorm 349}      {computer-science}
+  \event 5 {1900} {2000}   {Data Structures}            {}      {dorm 349}      {computer-science}
+  \event 5 {2000} {2130}   {Linear Algebra}             {}      {dorm 349}      {mathematics}
+  
+
+  \event 6 {0700} {0800}   {Vocabulary}                 {}      {dorm 349}      {english}
+  \event 6 {0800} {0930}   {English}                    {}      {dorm 349}      {english}
+  \event 6 {0950} {1120}   {Statistical Inference}      {}      {dorm 349}      {mathematics}
+  \event 6 {1250} {1420}   {Machine Learning}           {}      {dorm 349}      {computer-science}
+  \event 6 {1440} {1610}   {Probability}                {}      {dorm 349}      {mathematics}
+  \event 6 {1630} {1800}   {Thomas Calculus}            {}      {dorm 349}      {mathematics}
+  \event 6 {1900} {2000}   {Data Structures}            {}      {dorm 349}      {computer-science}
+  \event 6 {2000} {2130}   {Linear Algebra}             {}      {dorm 349}      {mathematics}
+  
+
+  \event 7 {0700} {0800}   {Vocabulary}                 {}      {dorm 349}      {english}
+  \event 7 {0800} {0930}   {English}                    {}      {dorm 349}      {english}
+  \event 7 {0950} {1120}   {Statistical Inference}      {}      {dorm 349}      {mathematics}
+  \event 7 {1250} {1420}   {Machine Learning}           {}      {dorm 349}      {computer-science}
+  \event 7 {1440} {1610}   {Probability}                {}      {dorm 349}      {mathematics}
+  \event 7 {1630} {1800}   {Thomas Calculus}            {}      {dorm 349}      {mathematics}
+  \event 7 {1900} {2000}   {Data Structures}            {}      {dorm 349}      {computer-science}
+  \event 7 {2000} {2130}   {Linear Algebra}             {}      {dorm 349}      {mathematics}
+
+\end{timetable}
+\end{landscape}
+\end{document}          

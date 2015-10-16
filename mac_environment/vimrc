@@ -1,0 +1,117 @@
+filetype plugin on
+syntax on
+set shell=sh		
+set autowrite		" auto write back when using :make :next, :rewind, :last...
+
+set autoindent
+set tabstop=4		" number of spaces that <TAB> count for
+set shiftwidth=4	" number of spaces to use for each step of
+					" 'cindent', >>, << etc
+set cindent
+set cino=g0,:0
+set mouse=a			" enable the use of mouse
+set number			" precede each line with line number
+
+
+set history=500
+set laststatus=2	" always show staus line
+set ruler			" show the line and column number of the cursor position
+set nocompatible
+
+
+set showcmd			" show command in the last line
+set showmode
+set incsearch		" while typing a search command, show where the pattern,
+					" as it was typed so far, matches. 
+set hlsearch
+
+"set nowrap
+set sidescrolloff=8
+set sidescroll=1
+
+set foldmethod=indent
+set foldlevelstart=99	" forbid auto fold when opening the file
+
+" jump to the last position when reopening the file
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	filetype plugin indent on
+endif
+
+map <F5> i{e<ESC>a}<ESC>
+
+" delete matched brace
+nmap <F7> ma%`ax	
+" fold all
+nmap <F2> zM
+" unfold all
+nmap <F3> zR
+
+nmap <F4> :call DebugWithoutMess()<CR>
+nmap <F5> :call CompileAndRun()<CR>
+nmap <F8> :call SetTitile()<CR>
+nmap <F12> :call AddHeader()<CR>
+
+nmap <C-d> gD
+nmap <C-t> :tabedit<CR>
+
+imap <c-l> <right>
+
+
+func! DebugWithoutMess()
+	wa
+	new
+	make
+	q
+endf
+
+func! CompileAndRun()
+	wa
+	if &filetype == "c"
+		exe "!clang-3.6 -Wall -g -std=gnu99 -O3 -march=native -lm -o %< % && ./%<"
+	elseif &filetype == "cc"
+		exe "!clang++-3.6 -Wall -g -std=c++11 -O3 -march=native -lm -o %< % && ./%<"
+	elseif &filetype == "cpp"
+		exe "!clang++-3.6 -Wall -g -std=c++11 -O0 -march=native -lm -o %< % && ./%<"
+	elseif &filetype == "sh"
+		exec "!sh %"
+	elseif &filetype == "python"
+		exec "!python %"
+	else
+		echo "unknown filetype!!!"
+	endif
+endf
+
+func! SetTitile()
+	if &filetype == "c"
+		call setline(1, "\#################################################")
+		call append(line("."), "\# File Name: ".expand("%"))
+		call append(line(".")+1, "\# Author: Spencer Alva Scott")
+		call append(line(".")+2, "\# Created Time: ".strftime("%c"))
+		call append(line(".")+3, "\##############################################")
+		call append(line(".")+4, "")
+	else
+		echo "unknown  filetype!!!"
+	endif
+endf
+
+" Jump between current line & include-line
+fun! AddHeader()
+	let cur_line = line(".")
+	let match_line = search("#include")
+	call setpos(".", [0, cur_line, 1, 0])
+	if (cur_line - match_line) > 4
+		exec "norm mm"
+	endif
+	let mark_line = line("'m")
+	if mark_line == cur_line
+		call setpos(".", [0, match_line, 1, 0])
+	else
+		call setpos(".", [0, mark_line, 1, 0])
+	endif
+endf
+
+" add by spencer for molokai colorscheme
+set t_Co=256
+colorscheme molokai
+let g:molokai_original=0

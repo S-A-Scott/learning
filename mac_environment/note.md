@@ -1,3 +1,12 @@
+# Contents
+
+- [Terminal](#terminal)
+- [Text Editor](#text-editor)
+- [Chrome](#chrome)
+- [TeX](#tex)
+- [Alfred](#alfred)
+- [Seil](#seil)
+
 # Terminal
 
 ## iTerm2
@@ -38,3 +47,13 @@
 1. Install [MacTeX](https://tug.org/mactex)
 2. In order to set `$PATH`, add the line below to the ~/.config/fish/config.fish
    - `set -gx PATH /Library/TeX/texbin $PATH`
+
+# Alfred
+
+1. Install Alfred and crack it.
+2. Add some useful workflows.
+
+# Seil
+
+1. Install and then swap key map of ESC and CAP LOCKS
+
